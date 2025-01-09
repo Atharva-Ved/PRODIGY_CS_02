@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Encryption Tool</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        input[type="file"] {
+            padding: 10px;
+            font-size: 1.1em;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        select {
+            padding: 10px;
+            font-size: 1.1em;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 12px 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .result img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .result a {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        .result a:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.1em;
+            color: #777;
+            background-color: #f4f7fa;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Image Encryption Tool</h1>
+        <p>Encrypt or Decrypt your image securely</p>
+    </header>
+
+    <div class="container">
+        <form method="POST" enctype="multipart/form-data">
+            <label for="image">Upload Image:</label>
+            <input type="file" name="image" id="image" required><br>
+
+            <label for="action">Choose Action:</label>
+            <select name="action" id="action" required>
+                <option value="encrypt">Encrypt</option>
+                <option value="decrypt">Decrypt</option>
+            </select><br><br>
+
+            <button type="submit">Process Image</button>
+        </form>
+
+        <div class="result">
+            {% if action == "encrypted" %}
+                <h2>Encrypted Image:</h2>
+                <img src="{{ encrypted_image }}" alt="Encrypted Image" width="400">
+                <br><br>
+                <a href="{{ url_for('download', filename='encrypted_image.png') }}" download>Download Encrypted Image</a>
+            {% elif action == "decrypted" %}
+                <h2>Decrypted Image:</h2>
+                <img src="{{ decrypted_image }}" alt="Decrypted Image" width="400">
+                <br><br>
+                <a href="{{ url_for('download', filename='decrypted_image.png') }}" download>Download Decrypted Image</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Thank you for using the Image Encryption Tool. Stay secure!</p>
+    </div>
+
+</body>
+</html>
