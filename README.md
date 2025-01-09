@@ -1,5 +1,5 @@
 # PRODIGY_CS_02
-Task 2: Pixel Manipulation for Image Encryption
+Task 2 : Pixel Manipulation for Image Encryption
 
 Problem Statement: Develop a simple image encryption tool using pixel manipulation. 
 You can perform operations like swapping pixel values or 
