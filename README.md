@@ -1,12 +1,9 @@
-# PRODIGY_CS_02
-Task 2 : Pixel Manipulation for Image Encryption
+# Pixel Manipulation for Image Encryption
 
 PROBLEM STATEMENT : Develop a simple image encryption tool using pixel manipulation. 
 You can perform operations like swapping pixel values or 
 applying a basic mathematical operation to each pixel. 
 Allow users to encrypt and decrypt images
-
-VIDEO LINK => https://imagekit.io/tools/asset-public-link?detail=%7B%22name%22%3A%22app.py%20-%20task2%20-%20Visual%20Studio%20Code%202025-01-10%2000-52-57.mp4%22%2C%22type%22%3A%22video%2Fmp4%22%2C%22signedurl_expire%22%3A%222028-01-09T19%3A52%3A14.346Z%22%2C%22signedUrl%22%3A%22https%3A%2F%2Fmedia-hosting.imagekit.io%2F%2F7a9fe192179f4fe1%2Fapp.py%2520-%2520task2%2520-%2520Visual%2520Studio%2520Code%25202025-01-10%252000-52-57.mp4%3FExpires%3D1831060334%26Key-Pair-Id%3DK2ZIVPTIP2VGHC%26Signature%3DXetHFe2bWkyxZK96vHWqrLvHv79bwuS6qK6oxMrI8IM~ZC-EL3IRswoaeDodsaKDhb~CzN-APBPHKNdtcahbW~eLixh56cjhhIXjSW4ZH1Bd17iayzeB-6eAcN5RPCxzW78BIKE5lw8ln3TWB5Ts7o93OSbmIXveO0a38H8iEsVrXVL09Ha84DAOTW1tqCsaXaByJifRXPJRrDM6Bitm5SfFCaxJWtygOCCxk9xsD1L5KWib78yExY5XqYM1ly1HARQIjEz2DmHqSEYcw0RpLCNtZWwbknw5yMyA9moVf01DBqtM-zxEOgsXJ6PaboF-3oYiEgasj2-NnLSMf0VthQ__%22%7D
 
 The one with app.py is GUI BASED and one with PMFIE.py is CLI BASED.
 Pixel Manipulation for Image Encryption
